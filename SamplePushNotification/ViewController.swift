@@ -23,17 +23,6 @@ class ViewController: UIViewController {
 
     @IBAction func ButtonTouchUpInside(_ sender: Any) {
         debugPrint("OK")
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.badge, .sound, .alert], completionHandler: { (granted, error) in
-            if error != nil {
-                return
-            }
-            if granted {
-                debugPrint("granted")
-            } else {
-                debugPrint("rejected")
-            }
-        })
     }
 }
 
